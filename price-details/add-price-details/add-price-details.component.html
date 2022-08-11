@@ -1,0 +1,49 @@
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+  <h3 mat-dialog-title>Add Price Details</h3>
+<div >
+  <div mat-dialog-content  class="">
+  <table>
+    
+    <tr>
+     <td> <label>Item Details ID</label></td>
+     <td><input type="text" name="ipdIId"[(ngModel)]="prodDetailsID" style="border-radius:4px; margin-left:5px"></td>
+     </tr> <br>
+    <tr>
+      <td> <label>Item Product Mrp</label></td>
+      <td><input type="text" name="ipdMrp" [(ngModel)]="mrp" style="border-radius:4px; margin-left:5px"></td>
+      </tr><br>
+     <tr>
+      <!-- <td> <label>Item Product MarketPrice</label></td>
+      <td><input type="text" name="ipdMarketPrice" [(ngModel)]="marketprice" style="border-radius:4px; margin-left:5px"></td>
+     </tr><br> -->
+     <tr>
+       <td> <label>Item Product Discount</label></td>
+       <td><input type="text" name="ipdDiscount" [(ngModel)]="discount" style="border-radius:4px; margin-left:5px"></td>
+       </tr><br>
+      <tr>
+        <td> <label>Item Product Start date</label></td>
+        <td> <input type="date" name="ipdStartDate" [(ngModel)]="start" style="border-radius:4px; margin-left:5px; width:100%;"></td>
+        </tr><br>
+       <tr>
+         <td> <label>Item Product End date</label></td>
+         <td><input type="date" name="ipdEndDate" [(ngModel)]="end" style="border-radius:4px; margin-left:5px; width:100%;"></td>
+         </tr><br>
+        <tr>
+          <td> <label>Item Product Status</label></td>
+          <td> <input type="text" name="ipdStatus"  [(ngModel)]="status"  style="border-radius:4px; margin-left:5px"></td>
+        </tr><br>
+      </table>
+    </div>
+
+<div mat-dialog-actions  style="padding:10px; text-align:center;">
+    <button class="btn btn-primary" mat-button mat-dialog-submit (click)="postPriceDetailsData()"    style="margin-right:5px;">Submit</button>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+

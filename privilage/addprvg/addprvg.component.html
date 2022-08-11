@@ -1,0 +1,29 @@
+
+
+<div class="card" style="width: 18rem; ">
+<div class="card-body">
+ <h3 mat-dialog-title style="text-align:center;color:black">ADD PRIVILAGE</h3>
+<div mat-dialog-content>
+<form [formGroup]="prvgForm">
+
+<i><label>ID</label></i>
+<input type="number" class="form-control" formControlName="roleid"><br>
+<div class="err" *ngIf="prvgForm.controls['roleid'].invalid && (prvgForm.controls['roleid'].dirty || prvgForm.controls['roleid'].touched)">
+<div class="text-danger" *ngIf="prvgForm.controls['roleid'].errors?.['required']">*Username is required </div>
+</div>
+
+<i><label>STATUS</label></i>
+<select class="form-control" formControlName="status">
+        <option class="form-control">Y</option>
+        <option class="form-control">N</option></select><br>
+<div class="err" *ngIf="prvgForm.controls['status'].invalid && (prvgForm.controls['status'].dirty || prvgForm.controls['status'].touched)">
+<div class="text-danger" *ngIf="prvgForm.controls['status'].errors?.['required']">*Status is required </div>
+</div>
+
+</form>
+<input type="submit" class="btn btn-primary" value="Add Role" (click)="AddPrvg()">
+</div>
+</div>
+</div>
+
+

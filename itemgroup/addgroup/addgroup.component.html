@@ -1,0 +1,29 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+  
+  <h3 mat-dialog-title style="text-align:center;color:black">ADD ROLE</h3>
+  <div mat-dialog-content>
+  <form [formGroup]="groupform">
+  
+
+  <i><label>Group Name</label></i>
+  <input type="text" class="form-control" formControlName="name"><br>
+  <div class="err" *ngIf="groupform.controls['name'].invalid && (groupform.controls['name'].dirty || groupform.controls['name'].touched)">
+    <div class="text-danger" *ngIf="groupform.controls['name'].errors?.['required']">*GRoupname is required </div>
+  </div>
+
+  <i><label>Group Status</label></i>
+  <select class="form-control" formControlName="status">
+          <option class="form-control">Y</option>
+          <option class="form-control">N</option></select><br>
+    <div class="err" *ngIf="groupform.controls['status'].invalid && (groupform.controls['status'].dirty || groupform.controls['status'].touched)">
+    <div class="text-danger" *ngIf="groupform.controls['status'].errors?.['required']">*Status is required </div>
+  </div>
+  </form>
+  
+  <input type="submit" class="btn btn-primary" value="Add Group" (click)="add()" >
+  
+  </div>
+  </div>
+  </div>
+  

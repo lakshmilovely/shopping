@@ -1,0 +1,31 @@
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+  
+  <h3 mat-dialog-title style="text-align:center;color:black">EDIT ROLE</h3>
+  <div mat-dialog-content>
+  <form [formGroup]="editrole">
+
+  <i><label>ROLE Id</label></i>
+  <input type="text" class="form-control" formControlName="rid"><br>
+  
+  
+  <i><label>ROLE NAME</label></i>
+  <input type="text" class="form-control" formControlName="rolename"><br>
+  
+  
+  <i><label> ROLE STATUS</label></i>
+  <select class="form-control" formControlName="status">
+          <option class="form-control">Y</option>
+          <option class="form-control">N</option></select><br>
+    
+
+  
+  </form>
+  
+  <input type="submit" class="btn btn-primary" value="Add Role" (click)="Erole()" >
+  
+  </div>
+  </div>
+  </div>
+  

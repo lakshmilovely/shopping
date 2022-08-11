@@ -1,0 +1,61 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<body >
+  <div class="container">
+  <div class="d-flex justify-content-center">
+      <div class="user_card">
+          <div class="d-flex justify-content-center">
+              <div class="brand_logo_container">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+              </div>
+          </div>
+          <div class="d-flex justify-content-center form_container">
+              <form [formGroup]="myform" >
+                  <div class="input-group mb-3">
+                  <h3 style="color:rgb(146, 145, 145);">Member Login</h3>
+                  </div>
+                  <div class="input-group mb-3">
+                      <input type="text" name="" class="form-control input_user" value="" placeholder="username" formControlName="username">
+                        <div class="text-danger" *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)">
+                          <div *ngIf="myform.controls['username'].errors?.['required']">required</div></div>
+                 </div>
+                 <div class="input-group mb-2">
+                      <input type="password" name="" class="form-control input_pass" value="" placeholder="password" formControlName="password">
+                        <div class="text-danger" *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)">
+                          <div *ngIf="myform.controls['username'].errors?.['required']">required</div></div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-2 login_container">
+               <button type="button" name="button" class="btn login_btn" (click)="loginuser()">sign in</button>
+             </div>
+              </form>
+          </div>
+  
+          <div class="mt-2">
+              
+              <div class="d-flex justify-content-center links">
+                  <a href="#">Forgot your password?</a>
+              </div>
+          </div>
+          <div class="m mt-2" style="text-align:center;">
+            <span >or</span>
+          </div>
+          <br>
+            <div class=" card-footer-mt-4">
+          <div class="d-flex justify-content-end social_icon">
+            <div >
+              <span><i class="fab fa-facebook-square"  (click)="facebookSignin()" ></i></span>
+              
+            </div>
+            <div >  
+            
+                <span><i class="fab fa-google-plus-square"  #loginRef style="margin-left:10px;"></i></span>
+             
+           </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</body>

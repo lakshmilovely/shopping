@@ -1,0 +1,61 @@
+<body>
+    <div class="container">
+    <div class="card" style="width:auto;">
+        <div class="card-body" style=" background-color: mintcream; background-clip: border-box;
+        border: 1px solid #d2d2dc;">
+    <h3 style="text-align:center;margin-top:10px" > View Price Details</h3>
+    <div class="col-md-12">
+        <div class="p-1 py-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex flex-row align-items-center back" routerLink="/add-price">
+                  <i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                    <h6 style="color:rgb(153, 106, 240)">Add</h6>
+                </div>
+                <h6 class="text-right"  style="color:darkblue"  routerLink="/home">Back Home</h6>
+            </div>
+            </div>
+            </div>
+   
+    <label for="inputSearch" class="form-label">Search</label>
+     <input type="text" name="inputSearch" id="inputSearch" class="form-control search-field"  aria-describedby="helpId" [(ngModel)]="searchtext">
+    <small id="helpId" class="text">Help text</small>
+    <table  class="table table-striped">
+    <thead> <tr>
+     <th scope="col" [appSort]="viewPriceData" data-order="desc" data-name="ipdId">PID</th>
+     <th>Item ID</th>
+     <th>MRP</th>
+     <th>MarketPrice</th>
+     <th scope="col" [appSort]="viewPriceData" data-order="desc" data-name="ipdDiscount">Discount(%)</th>
+     <th>OfferStart</th>
+     <th>Offer End</th>
+     <th>Time Stamp</th>
+     <th>Edit/Delete</th>
+ </tr>
+ </thead>
+     
+  <tbody> 
+  <tr *ngFor="let a of viewPriceData |search:searchtext">
+     <td>{{a.ipdId}}</td>
+     <td>{{a.ipdIId}}</td>
+     <td>{{a.ipdMrp}}</td>
+     <td>{{a.ipdMarketPrice}}</td>
+     <td>{{a.ipdDiscount}}</td>
+     <td>{{a.ipdStartDate}}</td>
+     <td>{{a.ipdEndDate}}</td>
+     <td>{{a.ipdTs}}</td>
+
+  
+  <td><div><i class="bi bi-pen-fill" style="color:blue;" routerLink='/edit-price/{{a.ipdId}}'></i><span> / 
+    
+  </span><i class="bi bi-trash-fill"  style="color:red;" (click)="deleteByID(a.ipdId)"></i></div></td>
+ 
+ </tr>   
+ </tbody>  
+ 
+ </table>
+
+
+</div>
+</div>
+</div>
+</body>

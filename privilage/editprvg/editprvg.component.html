@@ -1,0 +1,31 @@
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+
+         <h1>EDIT PRIVILAGES</h1>
+      <!-- Login Form -->
+      <form [formGroup]="prvgForm">
+
+        <label>ID</label>
+        <input type="text" id="login" class="fadeIn second" name="login"  formControlName="id">
+
+        <label>ROLEID</label>
+        <input type="text" id="login" class="fadeIn second" name="login" formControlName="roleid">
+
+
+        <label>STATUS</label>
+        <input type="text" id="password" class="fadeIn third" name="login" formControlName="status">
+
+        <input type="submit" class="fadeIn fourth" value="Update Privilage" (click)="EditPrvg()">
+
+
+
+      <!-- Remind Passowrd -->
+  </form>
+
+    </div>
+  </div>
+  </body>

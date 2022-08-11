@@ -1,0 +1,53 @@
+.card{
+    padding:20px;
+    margin:50px ;
+   border-color:black;
+   border-width: 3px;
+   align-items: center;
+   background-color:white;
+}
+.gradient-custom{
+ 
+   
+        /* fallback for old browsers */
+        background:black;
+    
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71));
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71)); 
+        height:auto;
+    }
+    .container{
+        margin-top:10px;
+    }
+    .offcanvas-start {
+        /* fallback for old browsers */
+        background:black;
+    
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71));
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71)); 
+    }
+    .offcanvas-body{
+    color:white
+    }
+    .m{
+        margin-top:80px;
+         /* fallback for old browsers */
+         background:black;
+    
+         /* Chrome 10-25, Safari 5.1-6 */
+         background: -webkit-linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71));
+         
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         background: linear-gradient(to right, rgb(115, 111, 119), rgb(56, 62, 71)); 
+        height:900px;
+    }
+    .rating-color{
+        color:#fbc634 !important;
+    }
+   

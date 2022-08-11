@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card" style="width:25rem;">
+ 
+  <div mat-dialog-content>
+<form [formGroup]="itemform">
+  <h2 mat-dialog-title style="text-align:center; margin-top: 10px;color: black; ">AddItem</h2>
+  <br>
+  <div class="mb-3">
+    <i><label> Item Name</label></i>
+   <input class="form-control mb-3" placeholder="Itemname" formControlName='itemname'>
+      <div *ngIf="itemform.controls['itemname'].invalid && (itemform.controls['itemname'].dirty || itemform.controls['itemname'].touched)">
+      <div *ngIf="itemform.controls['itemname'].errors?.['required']" style="color: rgb(233, 59, 59);">Itemname is required.</div>
+      </div>
+</div>
+<div class="mb-3">
+  <i><label> Item Discount</label></i>
+  <input class="form-control mb-3" placeholder="ItemDescount" formControlName='itemDesc'>
+      <div *ngIf="itemform.controls['itemDesc'].invalid && (itemform.controls['itemDesc'].dirty || itemform.controls['itemDesc'].touched)">
+      <div *ngIf="itemform.controls['itemDesc'].errors?.['required']" style="color: rgb(233, 59, 59);">ItemDescount is required.</div>
+      </div>
+</div>
+<div class="mb-3">
+  <i><label> Item Status</label></i>
+  <select class="form-select form-control" aria-label="Default select example" formControlName="itemstatus">
+      <option value="" disabled selected hidden>Itemstatus</option>
+      <option >Y</option>
+      <option >N</option>
+  </select>
+  <div *ngIf="itemform .controls['itemstatus'].invalid && (itemform.controls['itemstatus'].dirty || itemform.controls['itemstatus'].touched)">
+  <div *ngIf="itemform.controls['itemstatus'].errors?.['required']"style="color: rgb(233, 59, 59);"> Itemstatus is required</div>
+  </div>
+</div>
+</form>
+<div class="d-flex flex-column align-items-center text-center ">
+    <img [src]="url" >
+      <input type="file" style="display:none" (change)="selectFile($event)" #input >
+      <button type="button" (click)="input.click()" style="background-color:darkblue;color:white">Browse</button>
+     
+      <br>
+ <div class="d-flex flex-column align-items-center text-center ">
+    <button type="button" class="btn btn-primary"   (click)="items()">Save</button>
+</div>
+</div>
+</div>
+</div>
+  
